@@ -9,8 +9,9 @@
   "scripts": {
     "fix": "eslint --fix .",
     "lint": "eslint .",
+    "spelling": "cspell examples/**/**/**/**/*.html",
     "vnu-jar": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --errors-only --filterfile .vnurc --no-langdetect --skip-non-html *.html examples/",
-    "test": "npm run lint && npm run vnu-jar"
+    "test": "npm run lint && npm run spelling && npm run vnu-jar"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/w3c/aria-practices#readme",
   "devDependencies": {
+    "cspell": "^3.1.3",
     "eslint": "^4.19.1",
     "vnu-jar": "^18.7.23"
   }
